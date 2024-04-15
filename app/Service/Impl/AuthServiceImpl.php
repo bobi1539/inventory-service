@@ -63,7 +63,7 @@ class AuthServiceImpl extends BaseService implements AuthService
     return [
       "access_token" => $token,
       "token_type" => "bearer",
-      "expires_in" => 60 * 60
+      "expires_in" => (int) env("JWT_TTL")
     ];
   }
 

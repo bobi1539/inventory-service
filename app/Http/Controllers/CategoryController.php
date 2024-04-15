@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Dto\Search\CommonSearch;
 use App\Helper\Helper;
 use App\Service\CategoryService;
 use Illuminate\Http\Request;
@@ -77,22 +76,5 @@ class CategoryController extends Controller
 	private function getCategoryId(Request $request)
 	{
 		return Helper::getPathVariable($request->getRequestUri());
-	}
-
-	private function getSearch(Request $request)
-	{
-		$search = $this->getQueryParam($request, "search");
-		$page = $this->getQueryParam($request, "page");
-		$size = $this->getQueryParam($request, "size");
-
-		return new CommonSearch($search, $page, $size);
-	}
-
-	private function getQueryParam(Request $request, $paramName)
-	{
-		if ($request->has($paramName)) {
-			return $request->get($paramName);
-		}
-		return "";
 	}
 }

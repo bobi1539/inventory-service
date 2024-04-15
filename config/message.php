@@ -16,4 +16,9 @@ return [
   "PASSWORD_MUST_CONTAIN_SYMBOL" => "Password Must Contain Symbol | Password Harus Mengandung Simbol",
   "REPEAT_PASSWORD_NOT_SAME" => "Password Not Same | Password Tidak Sama",
   "EMAIL_IS_REGISTERED" => "Email Is Registered | Email Telah Terdaftar",
+  "SEQUENCE_IS_REQUIRED" => "Sequence Is Required | Urutan Tidak Boleh Kosong",
+  "SEQUENCE_MUST_NUMBER" => "Sequence Must Number | Urutan Harus Angka",
+  "ICON_IS_REQUIRED" => "Icon Is Required | Icon Tidak Boleh Kosong",
+  "URL_IS_REQUIRED" => "Url Is Required | Url Tidak Boleh Kosong",
+  "MENU_WITH_SEQUENCE_ALREADY_EXIST" => "Menu With Sequence Already Exist | Menu Dengan Urutan Tersebut Telah Ada",
 ];

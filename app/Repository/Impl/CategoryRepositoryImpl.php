@@ -4,9 +4,10 @@ namespace App\Repository\Impl;
 
 use App\Dto\Search\CommonSearch;
 use App\Models\Category;
+use App\Repository\BaseRepository;
 use App\Repository\CategoryRepository;
 
-class CategoryRepositoryImpl implements CategoryRepository
+class CategoryRepositoryImpl extends BaseRepository implements CategoryRepository
 {
   public function saveCategory($category)
   {
@@ -46,12 +47,5 @@ class CategoryRepositoryImpl implements CategoryRepository
         "like",
         "%" . $search->getSearch() . "%"
       )->get();
-  }
-
-  private function isDeletedFalse()
-  {
-    return [
-      ["is_deleted", "=", false]
-    ];
   }
 }
